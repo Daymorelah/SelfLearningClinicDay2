@@ -5,7 +5,7 @@ other OOP concepts. Push this solution to GitHub. **/
 'use strict';
 
 class GradeBook{
-	constructor(subject){
+	constructor(subject=''){
 		this.subject = subject;
 	}// end of constructor function
 
@@ -22,7 +22,7 @@ class Student extends GradeBook{
 	}// end of cnstructor
 
 	getstudentName(){
-		return this.tudentName;
+		return this.studentName;
 	}//end of getsubject function
 
 	welcomeMessage(){
@@ -70,6 +70,8 @@ class Teacher extends GradeBook{
 	}//end of function teachersPerformance
 
 }//end of subclass teacher
+
+export {GradeBook,Student,Teacher};
 
 /*
 let student1 = new Student('mathematics','Adewale Adeoye');

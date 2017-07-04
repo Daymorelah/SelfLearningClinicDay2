@@ -1,3 +1,5 @@
 
-# noe.js folder that contains dependencies  for the node app
+# node.js folder that contains dependencies  for the node app
 node_modules
+# node log file 
+package-lock.json
