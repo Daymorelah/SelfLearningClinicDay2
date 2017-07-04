@@ -1,10 +1,11 @@
-/** Create an OOP implementation by modelling a real-world scenario/problem, 
-while taking advantage of inheritance, encapsulation, polymorphism and the 
-other OOP concepts. Push this solution to GitHub. **/
+
 
 'use strict';
 
+//Declare and define superclass Gradebook.
+//Class GradeBook houses methods. This shows the OOP concept of Encapsulation.
 class GradeBook{
+
 	constructor(subject=''){
 		this.subject = subject;
 	}// end of constructor function
@@ -15,6 +16,8 @@ class GradeBook{
 
 }// end of class GradeBook
 
+//Declare and define subclass Student. This shows the OOP concept of Inheritance.
+//subClass Student houses methods. This shows the OOP concept of Encapsulation. 
 class Student extends GradeBook{
 	constructor(subject,studentName){
 		super(subject);
@@ -25,6 +28,7 @@ class Student extends GradeBook{
 		return this.studentName;
 	}//end of getsubject function
 
+//Same function name as defined in subclass Teacher but performs a different action.This shows the OOP concept of Polymorphism
 	welcomeMessage(){
 		return `Welcome to the Grade Book for Student: ${this.studentName}`
 	}
@@ -41,7 +45,10 @@ class Student extends GradeBook{
 
 }//end of subclass student
 
+//Declare and define subclass Teacher. This shows the OOP concept of Inheritance.
+//subClass Teacher houses methods. This shows the OOP concept of Encapsulation.
 class Teacher extends GradeBook{
+
 	constructor(subject,teacherName){
 		super(subject);
 		this.teacherName = teacherName;
@@ -51,6 +58,7 @@ class Teacher extends GradeBook{
 		return this.teacherName;
 	}//end of function get teacherName
 
+//Same function name as defined in subclass Student but performs a different action.This shows the OOP concept of Polymorphism
 	welcomeMessage(){
 		return `Welcome to the Grade Book for Teacher: ${this.teacherName}`
 	} //end of function welcome message
@@ -71,22 +79,4 @@ class Teacher extends GradeBook{
 
 }//end of subclass teacher
 
-export {GradeBook,Student,Teacher};
-
-/*
-let student1 = new Student('mathematics','Adewale Adeoye');
-let teacher1 = new Teacher('mathematics','Jhon Doe');
-
-console.log('students nanme is: '+student1.studentName);
-console.log('students subject is: '+student1.subject);
-
-console.log('teachers nanme is: '+teacher1.teacherName);
-console.log('teachers subject is: '+teacher1.subject);
-
-console.log('students nanme is: '+student1.studentName);
-
-console.log('Teachers outcome: '+teacher1.teachersPerformance(20,5,16));
-
-console.log('welcome for student is: '+student1.welcomeMessage());
-console.log('welcome for teacher is: '+teacher1.welcomeMessage());
-*/
+export {GradeBook,Student,Teacher}; // exports multiple classes.
